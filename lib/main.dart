@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore_for_file: prefer_const_constructors
 void main() {
   runApp(const MyApp());
 }
@@ -11,105 +12,1177 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CALENDAR 2023',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(color: Color(0xFF0D47A1))),
+      home: const Calendar(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+class Calendar extends StatefulWidget {
+  const Calendar({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Calendar> createState() => _CalendarState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class _CalendarState extends State<Calendar> {
+  String textMount = 'มกราคม';
+  String year = '2566';
+  String textMountEng = 'January';
+  String yearCM = '2023';
+  int numMount = 1;
+  var mount = 1;
+  String d1 = '1',
+      d2 = '2',
+      d3 = '3',
+      d4 = '4',
+      d5 = '5',
+      d6 = '6',
+      d7 = '7',
+      d8 = '8',
+      d9 = '9',
+      d10 = '10',
+      d11 = '11',
+      d12 = '12',
+      d13 = '13',
+      d14 = '14',
+      d15 = '15',
+      d16 = '16',
+      d17 = '17',
+      d18 = '18',
+      d19 = '19',
+      d20 = '20',
+      d21 = '21',
+      d22 = '22',
+      d23 = '23',
+      d24 = '24',
+      d25 = '25',
+      d26 = '26',
+      d27 = '27',
+      d28 = '28',
+      d29 = '29',
+      d30 = '30',
+      d31 = '31',
+      d32 = '',
+      d33 = '',
+      d34 = '',
+      d35 = '';
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    switch (mount) {
+      case 1:
+        textMount = 'มกราคม';
+
+        textMountEng = 'January';
+
+        numMount = 1;
+        d1 = '1';
+        d2 = '2';
+        d3 = '3';
+        d4 = '4';
+        d5 = '5';
+        d6 = '6';
+        d7 = '7';
+        d8 = '8';
+        d9 = '9';
+        d10 = '10';
+        d11 = '11';
+        d12 = '12';
+        d13 = '13';
+        d14 = '14';
+        d15 = '15';
+        d16 = '16';
+        d17 = '17';
+        d18 = '18';
+        d19 = '19';
+        d20 = '20';
+        d21 = '21';
+        d22 = '22';
+        d23 = '23';
+        d24 = '24';
+        d25 = '25';
+        d26 = '26';
+        d27 = '27';
+        d28 = '28';
+        d29 = '29';
+        d30 = '30';
+        d31 = '31';
+        d32 = '';
+        d33 = '';
+        d34 = '';
+        d35 = '';
+        break;
+      case 2:
+        textMount = 'กุมภาพันธ์';
+
+        textMountEng = 'February';
+
+        numMount = 2;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '';
+        d33 = '';
+        d34 = '';
+        d35 = '';
+        break;
+      case 3:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'March';
+
+        numMount = 3;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 4:
+        textMount = 'เมษายน';
+
+        textMountEng = 'April';
+
+        numMount = 4;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '';
+        d5 = '';
+        d6 = '';
+        d7 = '1';
+        d8 = '2';
+        d9 = '3';
+        d10 = '4';
+        d11 = '5';
+        d12 = '6';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 5:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'May';
+
+        numMount = 5;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 6:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'June';
+
+        numMount = 6;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 7:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'July';
+
+        numMount = 7;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 8:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'August';
+
+        numMount = 8;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 9:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'September';
+
+        numMount = 9;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 10:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'October';
+
+        numMount = 10;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 11:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'November';
+
+        numMount = 11;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+      case 12:
+        textMount = 'มีนาคม';
+
+        textMountEng = 'December';
+
+        numMount = 12;
+        d1 = '';
+        d2 = '';
+        d3 = '';
+        d4 = '1';
+        d5 = '2';
+        d6 = '3';
+        d7 = '4';
+        d8 = '5';
+        d9 = '6';
+        d10 = '7';
+        d11 = '8';
+        d12 = '9';
+        d13 = '10';
+        d14 = '11';
+        d15 = '12';
+        d16 = '13';
+        d17 = '14';
+        d18 = '15';
+        d19 = '16';
+        d20 = '17';
+        d21 = '18';
+        d22 = '19';
+        d23 = '20';
+        d24 = '21';
+        d25 = '22';
+        d26 = '23';
+        d27 = '24';
+        d28 = '25';
+        d29 = '26';
+        d30 = '27';
+        d31 = '28';
+        d32 = '29';
+        d33 = '30';
+        d34 = '31';
+        d35 = '';
+        break;
+    }
+
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: AppBar(
+              title: Row(
+            children: [
+              Container(
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 40),
+                child: Text(
+                  'CALENDAR 2023',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              )
+            ],
+          ))),
+      body: Column(
+        children: [
+          Expanded(
+              flex: 1,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(children: [
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Center(
+                        child: Center(
+                            child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 1;
+                                  });
+                                },
+                                child: Text('January'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 2;
+                                  });
+                                },
+                                child: Text('February'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 3;
+                                  });
+                                },
+                                child: Text('March'))),
+                      ],
+                    ))),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Center(
+                        child: Center(
+                            child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 4;
+                                  });
+                                },
+                                child: Text('April'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 5;
+                                  });
+                                },
+                                child: Text('May'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 6;
+                                  });
+                                },
+                                child: Text('June'))),
+                      ],
+                    ))),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Center(
+                        child: Center(
+                            child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 7;
+                                  });
+                                },
+                                child: Text('July'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 8;
+                                  });
+                                },
+                                child: Text('August'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 9;
+                                  });
+                                },
+                                child: Text('September'))),
+                      ],
+                    ))),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: Center(
+                        child: Center(
+                            child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 10;
+                                  });
+                                },
+                                child: Text('October'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 11;
+                                  });
+                                },
+                                child: Text('November'))),
+                        Expanded(
+                            child: OutlinedButton(
+                                onPressed: () {
+                                  setState(() {
+                                    mount = 12;
+                                  });
+                                },
+                                child: Text('December'))),
+                      ],
+                    ))),
+                  )
+                ]),
+              )),
+          Expanded(
+              flex: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                        child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.orange.shade50,
+                        borderRadius: BorderRadius.circular(0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.red,
+                            blurRadius: 10,
+                            offset: Offset(0, 0), // Shadow position
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
+                                  '$textMount\n$year',
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
+                                  '$numMount',
+                                  style: TextStyle(
+                                    fontSize: 50,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
+                                  '$textMountEng\n$yearCM',
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Divider(
+                              height: 25,
+                              thickness: 1,
+                              color: Colors.black,
+                            ),
+                          ), //ชื่อเดือน
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'S',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.red,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'M',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'T',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'W',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Th',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'F',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Sa',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.red,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Divider(
+                              height: 25,
+                              thickness: 1,
+                              color: Colors.black,
+                            ),
+                          ), //วัน
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d1,
+                                              style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d2,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d3,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d4,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d5,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d6,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d7,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d8,
+                                              style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d9,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d10,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d11,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d12,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d13,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d14,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d15,
+                                              style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d16,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d17,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d18,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d19,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d20,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d21,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d22,
+                                              style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d23,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d24,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d25,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d26,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d27,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d28,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d29,
+                                              style: TextStyle(
+                                                  color: Colors.red,
+                                                  fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d30,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d31,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d32,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d33,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d34,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(
+                                          child: Text(d35,
+                                              style: TextStyle(fontSize: 18))),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ) //วันที่
+                        ],
+                      ),
+                    ))
+                  ],
+                ),
+              ))
+        ],
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
